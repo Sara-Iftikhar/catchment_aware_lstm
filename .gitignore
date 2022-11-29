@@ -49,4 +49,4 @@ docs/source/gen_modules/
 examples/.jovianrc
 examples/catboost_info/
 catboost_info/
-*catboost_info/ 
+*catboost_info/
