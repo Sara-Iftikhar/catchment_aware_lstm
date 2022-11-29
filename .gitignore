@@ -1,0 +1,52 @@
+*.csv
+*.xlsx
+*.png
+*.npz
+*.mat
+*.h5
+*.nc
+*.feather
+*.parquet
+*.npy
+
+*.qgz
+
+.ipynb_checkpoints/
+__pycache__/
+.idea/
+.vscode/
+.eggs/
+
+# private stuff
+results/
+data/
+testing/
+manuscript/
+
+# build related
+*dist/
+*build/
+
+# Unit test / coverage reports
+.coveralls.yml
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.jovianrc
+.tox/
+tox.ini
+
+
+# docs
+site/
+docs/source/auto_examples/
+docs/source/gen_modules/
+
+# run time junk
+examples/.jovianrc
+examples/catboost_info/
+catboost_info/
+*catboost_info/ 
