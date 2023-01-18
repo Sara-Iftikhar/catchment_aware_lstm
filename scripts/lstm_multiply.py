@@ -1,4 +1,10 @@
+"""
+======================
+3. Multiplication
+======================
+"""
 
+#%%
 import site
 site.addsitedir(r"E:\AA\AI4Water")
 site.addsitedir(r"E:\AA\easy_mpl")
@@ -6,6 +12,7 @@ site.addsitedir(r"E:\AA\easy_mpl")
 from ai4water import Model
 from ai4water.preprocessing import Transformations
 from utils import prepare_data, eval_model
+#%%
 
 lookback = 12
 batch_size = 128
@@ -68,12 +75,16 @@ model = Model(model = {"layers": layers},
 # %%
 h = model.fit(x=tr_x, y=tr_y, validation_data=(val_x, val_y)
               )
+#%%
 
 eval_model(model, tr_x, tr_y, batch_size=batch_size, prefix="Training")
+#%%
 
 eval_model(model, val_x, val_y, batch_size=batch_size, prefix="Validation")
+#%%
 
 eval_model(model, test_x, test_y, batch_size=batch_size, prefix="Test")
+#%%
 
 model.predict(test_x, test_y, plots=['residual', 'edf', 'regression', 'prediction'
                                      ])

@@ -1,4 +1,10 @@
+"""
+====================
+4. Conditional
+====================
+"""
 
+#%%
 import site
 site.addsitedir(r"E:\AA\AI4Water")
 site.addsitedir(r"E:\AA\easy_mpl")
@@ -65,6 +71,7 @@ layers = {
 
     "Dense": 1
 }
+#%%
 
 model = Model(model = {"layers": layers},
               batch_size=batch_size,
@@ -73,12 +80,16 @@ model = Model(model = {"layers": layers},
 
 # %%
 h = model.fit(x=tr_x, y=tr_y, validation_data=(val_x, val_y))
+#%%
 
 eval_model(model, tr_x, tr_y, batch_size=batch_size, prefix="Training")
+#%%
 
 eval_model(model, val_x, val_y, batch_size=batch_size, prefix="Validation")
+#%%
 
 eval_model(model, test_x, test_y, batch_size=batch_size, prefix="Test")
+#%%
 
 model.predict(test_x, test_y, plots=['residual', 'edf', 'regression', 'prediction'
                                      ])
